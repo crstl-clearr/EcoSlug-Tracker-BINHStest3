@@ -296,6 +296,7 @@
                     </div>
                 </div>
             </div>
+            
          <!-- Accounts -->
             <!DOCTYPE html>
 <html lang="en">
@@ -308,6 +309,51 @@
   <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body>
+
+    <!-- Cloud Sync & Account -->
+      <div class="settings-section">
+        <div class="settings-title">Cloud Sync & Account</div>
+        <div class="settings-group">
+          <div class="setting-item">
+            <label class="setting-label">Google Account</label>
+
+            <!-- Google Sign-In -->
+            <div id="g_id_onload"
+                data-client_id="973644214985-cgb7ehk0d902nhbmja3vkn6ialt8uio9.apps.googleusercontent.com"
+                data-context="signin"
+                data-ux_mode="popup"
+                data-callback="handleCredentialResponse"
+                data-auto_prompt="false">
+            </div>
+
+            <div class="g_id_signin"
+                data-type="standard"
+                data-shape="rectangular"
+                data-theme="outline"
+                data-text="sign_in_with"
+                data-size="large"
+                data-logo_alignment="left">
+            </div>
+
+            <!-- User Info -->
+            <div id="user-info" style="margin-top: 20px;"></div>
+
+            <!-- Sign out -->
+            <button id="signOutBtn" class="setting-button danger" onclick="signOut()" style="display:none; margin-top: 10px;">
+              Sign Out
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/theme.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
+            
             <!-- Privacy & Storage -->
             <div class="settings-section">
                 <div class="settings-title">
@@ -763,5 +809,6 @@
     </script>
 </body>
 </html>
+
 
 
