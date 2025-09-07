@@ -426,7 +426,7 @@ window.googleAuthService = {
 
     init() {
         google.accounts.id.initialize({
-            client_id: "YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com",
+            client_id: "973644214985-cgb7ehk0d902nhbmja3vkn6ialt8uio9.apps.googleusercontent.com",
             callback: this.handleCredentialResponse.bind(this)
         });
         google.accounts.id.renderButton(
@@ -478,4 +478,5 @@ document.addEventListener("DOMContentLoaded", () => {
         googleAuthService.init();
     }
 });
+
 
