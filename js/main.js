@@ -479,4 +479,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("sidebarOverlay");
+    sidebar.classList.toggle("active");
+    overlay.classList.toggle("active");
+}
+
+function closeSidebar() {
+    document.getElementById("sidebar").classList.remove("active");
+    document.getElementById("sidebarOverlay").classList.remove("active");
+}
+
+function setActiveNavItem(el) {
+    const items = document.querySelectorAll(".sidebar-item");
+    items.forEach(item => item.classList.remove("active"));
+    el.classList.add("active");
+    closeSidebar(); // auto-close after click on mobile
+}
+
+
 
