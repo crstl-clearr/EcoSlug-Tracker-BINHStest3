@@ -16,6 +16,7 @@
     --shadow-dark: rgba(0, 0, 0, 0.3);
     --accent-primary: #4CAF50;
     --accent-primary-hover: #45a049;
+    --accent-primary-light; #a5d6a7;
     --accent-green: #235418;
     --accent-green-hover: #1e4615;
     --accent-red: #FF6B6B;
@@ -367,12 +368,12 @@ body {
 
 /* Back Button */
 .back-button {
-    position: absolute;
+    position: fixed;
     top: 1rem;
     right: 1rem;
-    background: var(--accent-primary);
-    border: 2px solid var(--accent-primary);
-    color: white;
+    background: rgba(165, 214, 167, 0.8);
+    border: 2px solid var(--accent-primary-light);
+    color: rgb(255, 255, 255);
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -387,8 +388,8 @@ body {
 }
 
 .back-button:hover {
-    background: var(--accent-primary-hover);
-    border-color: var(--accent-primary-hover);
+    background: var(--accent-primary-hover); /* 50% visible */
+    border-color: var(--accent-primary);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px var(--shadow-medium);
 }
@@ -2310,3 +2311,4 @@ body {
   border-radius: 50%;
   margin-top: 0.5rem;
 }
+
